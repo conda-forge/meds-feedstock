@@ -1,5 +1,5 @@
 {% set name = "meds" %}
-{% set version = "0.9.10" %}
+{% set version = "0.9.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/esheldon/meds/archive/v{{ version }}.tar.gz
-  sha256: a82c8b8bf5ec2953e4e62135b96516b9e4b29ad87c45c9099834ba2af6e4cc57
+  sha256: 641d9d5d4dd581f6ec0183096f5305a9cc525fd8ce58a44e7e93ac26adfb97b3
 
 build:
-  number: 2
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
