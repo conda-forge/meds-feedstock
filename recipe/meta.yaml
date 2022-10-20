@@ -1,5 +1,5 @@
 {% set name = "meds" %}
-{% set version = "0.9.15" %}
+{% set version = "0.9.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/esheldon/meds/archive/v{{ version }}.tar.gz
-  sha256: 465e646ca1301dca6b051c8ce5ccdd0edb266453e7dc5221930c52d742034b0b
+  sha256: 1078d0aa1ca173f8ad4e1c7d36ef1549d4ebeb23eea4a55304c7cad71dbab3a4
 
 build:
   number: 0
