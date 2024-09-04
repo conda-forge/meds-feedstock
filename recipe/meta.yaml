@@ -10,7 +10,7 @@ source:
   sha256: 0d8a82d89cfb791d777c5404696fdf48368eb566a54bddc7c36b7dbadb5178e0
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,9 +20,11 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
+    - setuptools
     - numpy
   run:
     - python
