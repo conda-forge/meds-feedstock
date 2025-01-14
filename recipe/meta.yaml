@@ -10,7 +10,7 @@ source:
   sha256: 0d8a82d89cfb791d777c5404696fdf48368eb566a54bddc7c36b7dbadb5178e0
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -31,7 +31,6 @@ requirements:
     - fitsio
     - pyyaml
     - esutil
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
