@@ -17,7 +17,7 @@ build:
   skip: win
   script:
     - if: linux
-      then: export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types -Wno-error=incompatible-pointer-types"
+      then: export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types -Wno-error=incompatible-pointer-types -std=c11"
     - ${{ PYTHON }} -m pip install . -vv
 
 requirements:
